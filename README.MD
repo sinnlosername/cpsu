@@ -68,5 +68,8 @@ Please consider the following things when contributing to this project:
 - The code must not contain any ESLint errors according to the projects ESLint configuration
 - The code must match the projects code formatting (tab size: 4, spaces as tabs)
 
+## Special thanks to
+- Steven ([Github](https://github.com/StevenKGER)): Testing & proofreading texts
+
 ## License  
 This project is licensed under the MIT License.
