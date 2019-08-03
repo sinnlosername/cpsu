@@ -1,0 +1,9 @@
+# Ignore developement files
+data
+config.toml
+
+# Ignore node modules
+node_modules
+
+# Ignore IDE files
+.idea

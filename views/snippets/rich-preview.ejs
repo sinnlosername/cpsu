@@ -1,0 +1,29 @@
+<title><%=locals.title%></title>
+
+
+
+
+<meta property="og:type" content="website">
+
+<% if (locals.metaTitle) { %>
+<meta name="title" content="<%=title%>">
+<meta property="og:title" content="<%=title%>">
+<meta property="twitter:title" content="<%=title%>">
+<% } %>
+
+<% if (locals.description) { %>
+<meta name="description" content="<%=locals.description%>">
+<meta property="og:description" content="<%=locals.description%>">
+<meta property="twitter:description" content="<%=locals.description%>">
+<% } %>
+
+<% if (locals.url) { %>
+<meta property="og:url" content="<%=locals.url%>">
+<meta property="twitter:url" content="<%=locals.url%>">
+<% } %>
+
+<% if(locals.imageUrl) { %>
+<meta property="og:image" content="<%=locals.imageUrl%>">
+<meta property="twitter:image" content="<%=locals.imageUrl%>">
+<meta property="twitter:card" content="summary_large_image">
+<% } %>

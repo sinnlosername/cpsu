@@ -1,0 +1,17 @@
+[http]
+host = "localhost"
+port = 8080
+overwriteProtocol = ""
+realIPHeader = "x-forward-for"
+
+[database]
+host = "localhost"
+port = 3306
+user = "cpsu"
+password = "cpsu"
+database = "cpsu"
+
+[app]
+nameLength = 4
+maxSingleFileSizeMB = 50
+fileCachingHeader = "no-cache, no-store, must-revalidate"

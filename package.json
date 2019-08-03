@@ -1,0 +1,27 @@
+{
+  "name": "cpsu",
+  "version": "1.1.0",
+  "description": "A simple but powerful open source sharing server",
+  "main": "lib/app.js",
+  "scripts": {
+    "start": "node bin/start.js"
+  },
+  "keywords": [],
+  "author": "Florian (https://florian.ws)",
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mime-types": "^2.1.24",
+    "moment": "^2.24.0",
+    "multiparty": "^4.2.1",
+    "promise-mysql": "^4.1.0",
+    "tmp": "^0.1.0",
+    "toml": "^3.0.0",
+    "url-regex": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  }
+}

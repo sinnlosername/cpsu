@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--suppress HtmlRequiredTitleElement -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <%- include('snippets/rich-preview', {
+        locals: {
+            title: title,
+            url: location.base + location.path,
+            imageUrl: location.base + "/" + info.fileName
+        }
+    }) %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: #141414;
+            user-select: none;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<img src="<%= info.fileName %>" alt="">
+</body>
+</html>

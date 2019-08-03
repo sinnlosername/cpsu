@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--suppress HtmlRequiredTitleElement -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%- include('snippets/rich-preview', {
+        locals: {
+            title: title,
+            url: location.base + location.path
+        }
+    }) %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            background: #141414;
+        }
+
+        html, pre, code, body {
+            box-sizing: border-box;
+            min-height: 100%;
+            min-width: 100%;
+            margin: 0;
+            padding: 0;
+            color: #f8f8f8;
+        }
+
+        pre {
+            padding: 16px;
+            font-size: 16px;
+            line-height: 1.1;
+        }
+
+        html::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: #141414
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background: rgba(248, 248, 248, 0.8);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<pre><code data-language="javascript"><%= body.replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;")
+        %></code></pre>
+</body>
+</html>
