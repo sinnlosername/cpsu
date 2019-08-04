@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--suppress HtmlRequiredTitleElement -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <%- include('snippets/rich-preview', {
+        locals: {
+            title: title,
+            url: location.base + location.path
+        }
+    }) %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.css" integrity="sha256-YVY0cgMlN3Yk6z5+sLnD90gFlKARWzjDwWSnReb0ATI=" crossorigin="anonymous" />
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: #121212;
+            user-select: none;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            max-height: 100%;
+            max-width: 100%;
+            width: 1080px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .container {
+                width: 85%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <video id="player" playsinline controls>
+        <source src="<%=info.fileName%>" type="<%=info.mimeType%>" />
+    </video>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.6/plyr.min.js" integrity="sha256-voP3sbDhk+YDZKsGO8dpMGk9qzne1cf3f1CRgjwRnrk=" crossorigin="anonymous"></script>
+<script type="application/javascript">
+    // noinspection JSUnresolvedFunction
+    new Plyr('#player', {
+        settings: [],
+        volume: 0.5
+    });
+</script>
+</body>
+</html>

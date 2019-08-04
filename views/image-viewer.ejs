@@ -14,27 +14,55 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.6/viewer.min.css" integrity="sha256-q2KPUgEtqLingM3KNTp8Fm8/hM7rl8u949OVi2fL4A4=" crossorigin="anonymous" />
+    <!--suppress CssUnusedSymbol -->
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+
         html, body {
+            font-family: "Roboto", serif;
             margin: 0;
             height: 100%;
             width: 100%;
             overflow: hidden;
-            background: #141414;
+            background: #121212;
             user-select: none;
         }
 
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            max-height: 100%;
-            max-width: 100%;
+        .viewer-tooltip {
+            top: 20%;
+        }
+
+        .viewer-fullscreen {
+            display: none;
+        }
+
+        .viewer-title {
+            height: 20px;
         }
     </style>
 </head>
 <body>
-<img src="<%= info.fileName %>" alt="">
+
+<img src="<%= info.fileName %>" alt="" style="display: none">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.6/viewer.min.js" integrity="sha256-vJ9Jq4hWRNWh4wj3ZszaBKjujB6jwD/QVncLUJfX4wc=" crossorigin="anonymous"></script>
+<script type="application/javascript">
+    const viewer = new Viewer(document.querySelector('img'), {
+        inline: true,
+        backdrop: false,
+        navbar: false,
+        toolbar: false,
+
+        minZoomRatio: 0.25,
+        maxZoomRatio: 5,
+        zoomRatio: 0.3,
+        ready() {
+            document.querySelector(".viewer-container").addEventListener('dblclick', () => {
+                document.querySelector(".viewer-fullscreen").click();
+            });
+        }
+    });
+</script>
 </body>
 </html>
