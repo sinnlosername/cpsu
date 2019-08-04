@@ -1,5 +1,4 @@
 # CPSU - Communist Processor to Share to U  
-
 A simple but powerful open source sharing server. It allows you to easily share image, files and links to your comrades. Written in Node.js.
 
 ## Simple upload
@@ -12,18 +11,17 @@ With this method you can upload a file by sending it as a POST  request body to 
 - File upload
 - URL shortening
 
-You can generated a ShareX configuration for your server at `http://host:port/s/sharex`. It can be imported in ShareX a custom uploader. 
+You can generate a ShareX configuration for your server at `http://host:port/s/sharex`. It can be imported as a custom uploader in ShareX. 
 
 ## View files
-You can view files in multiple different ways:
+You can view files in different ways:
 `http://host:port/file`: This will show the file with a viewer for the file type, if available. If not it will return the raw file.
 `http://host:port/file.ext`: When adding the extension it will always return the file in a raw format.
 `http://host:port/file?full`: This is just a shortcut to get the file with extension.
-`http://host:port/file?info`: This will show you basic information about the file (size, type, ...)
+`http://host:port/file?info`: This will show basic information about the file (size, type, ...)
 
 ## Installation  
-  
-The following steps get you a fully-functioning installation.  
+The following steps get you a fully-functioning server installation.  
 
 ### Prepare
 1. Make sure you installed [Node.js](https://nodejs.org) on your system.
@@ -35,11 +33,10 @@ The following steps get you a fully-functioning installation.
 5. Change the settings in the `config.toml.default` according to your needs. 
 6. Move the `config.toml.default` to `config.toml`
 7. Run `npm install` to install all dependencies
-8. You can now start the software using `npm start`. If you want to run the software permanently you can use programs like `tmux` on linux or run it as a service on windows.
+8. You can now start the software using `npm start`. If you want to run the software constantly you can use programs like `tmux` on linux or run it as a service on Windows.
 
 ## Configuration  
-  
-You can find the configuration in the `config.toml`. The server must be restarted to apply changed settings.  The following options are available:
+You can find the configuration in the `config.toml`. The server must be restarted to apply changed settings. The following options are available:
   
 #### HTTP
 `host`: The hostname which the server should listen to. Example: `localhost`
@@ -59,12 +56,20 @@ You can find the configuration in the `config.toml`. The server must be restarte
 `nameLength`: The length of generated file names. Names can contain characters from A-Z, a-z and 0-9. Example: `4`
 `maxSingleFileSizeMB`: The maximum size a single file may have (in MB). Example: `50`
 `fileCachingHeader`: The [caching header](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Cache-Control) sent when files are served. Example: `no-cache, no-store, must-revalidate`
- 
+
+## Database
+The `setup.sql` contains all sql statements to create a database for the server. 
+On setup: Execute all statements on the correct database for the server.
+On update: Only execute all statements after the version you have already installed. The sql file contains comments for each version.
+
 ## Contributing  
 Please consider the following things when contributing to this project:
 - The code must work on all systems (Windows, macOS, Linux)
 - The code must not contain any ESLint errors according to the projects ESLint configuration
 - The code must match the projects code formatting (tab size: 4, spaces as tabs)
+
+## Special thanks to
+- Steven ([Github](https://github.com/StevenKGER)): Testing & proofreading texts
 
 ## License  
 This project is licensed under the MIT License.
