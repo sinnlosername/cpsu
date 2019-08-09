@@ -24,7 +24,13 @@
 <meta property="twitter:card" content="summary_large_image">
 <% } %>
 
-<% if (locals.videoUrl && locals.videoType) { %>
+<% if (locals.videoUrl && locals.videoType && locals.url) { %>
 <meta property="og:video" content="<%=locals.videoUrl%>" />
+<meta property="og:video:url" content="<%=locals.videoUrl%>">
 <meta property="og:video:type" content="<%=locals.videoType%>" />
+
+<meta name="twitter:player" content="<%=locals.url%>">
+<meta name="twitter:player:stream" content="<%=locals.videoUrl%>">
+<meta name="twitter:player:stream:content_type" content="<%=locals.videoType%>">
+<meta name="twitter:card" content="player">
 <% } %>
