@@ -1,8 +1,4 @@
 <title><%=locals.title%></title>
-
-
-
-
 <meta property="og:type" content="website">
 
 <% if (locals.metaTitle) { %>
@@ -26,4 +22,9 @@
 <meta property="og:image" content="<%=locals.imageUrl%>">
 <meta property="twitter:image" content="<%=locals.imageUrl%>">
 <meta property="twitter:card" content="summary_large_image">
+<% } %>
+
+<% if (locals.videoUrl && locals.videoType) { %>
+<meta property="og:video" content="<%=locals.videoUrl%>" />
+<meta property="og:video:type" content="<%=locals.videoType%>" />
 <% } %>

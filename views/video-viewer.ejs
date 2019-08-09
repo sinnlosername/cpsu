@@ -7,7 +7,9 @@
     <%- include('snippets/rich-preview', {
         locals: {
             title: title,
-            url: location.base + location.path
+            url: location.base + location.path,
+            videoUrl: location.base + "/" + info.fileName,
+            videoType: info.mimeType
         }
     }) %>
 
