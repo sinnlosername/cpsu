@@ -71,7 +71,7 @@ You can find the configuration in the `config.toml`. The server must be restarte
 
 `maxSingleFileSizeMB`: The maximum size a single file may have (in MB). Example: `50`
 
-`maxThumbnailCacheMB`: The maximum size of the thumbnail cache (in MB). Example: '25'
+`maxThumbnailCacheMB`: The maximum size of the thumbnail cache (in MB). Example: `25`
 
 `fileCachingHeader`: The [caching header](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Cache-Control) sent when files are served. Example: `no-cache, no-store, must-revalidate`
 
