@@ -15,10 +15,15 @@ You can generate a ShareX configuration for your server at `http://host:port/s/s
 
 ## View files
 You can view files in different ways:
+
 `http://host:port/file`: This will show the file with a viewer for the file type, if available. If not it will return the raw file.
+
 `http://host:port/file.ext`: When adding the extension it will always return the file in a raw format.
+
 `http://host:port/file/full` or `http://host:port/file+`: This will redirect you to the file including the extension.
+
 `http://host:port/file/info` or `http://host:port/file?`: This will show basic information about the file (size, type, ...).
+
 `http://host:port/file/thumbnail`: This will show you a thumbnail (jpeg, 240x426).
 
 ## Installation  
