@@ -26,17 +26,26 @@ The following steps get you a fully-functioning server installation.
 ### Prepare
 1. Make sure you installed [Node.js](https://nodejs.org) on your system.
 2. Make sure you have a MySQL compatible database server.
-3. Download or clone the repository into a folder.
+3. Download or clone the repository into a folder (`git clone https://github.com/sinnlosername/cpsu.git`).
 
 ### Setup
-4. Execute all SQL statements from the `setup.sql` in your database. See in the Database Section for more information.
-5. Change the settings in the `config.toml.default` according to your needs. 
-6. Move the `config.toml.default` to `config.toml`
-7. Run `npm install` to install all dependencies
-8. You can now start the software using `npm start`. If you want to run the software constantly you can use programs like `tmux` on linux or run it as a service on Windows.
+4. Run `npm install` in the folder to install all dependencies
+5. Run `npm run configure` and follow the instructions. It will guide you trough all configuration parameters
+6. Once you successfully configured the server, you can just run it using `npm start`
 
-## Configuration  
-You can find the configuration in the `config.toml`. The server must be restarted to apply changed settings. The following options are available:
+### Run in background
+If you want the server to always run, you can use `tmux` or `screen`. You can install both from your package manager.
+
+I suggest to use `tmux`, due to it being more advanced and more simple. When using `tmux` you can start the
+server with the follwoing command: `tmux new -s cpsu npm start`. 
+
+You can leave the tmux session by pressing `CTRL + B` and then `D` and access it again using `tmux a -t cpsu`.
+
+## Configuration
+To configure the server run the `npm run configure`. It will guide you trough all settings. The server must be 
+restarted to apply changed settings. 
+
+However you can also find the configuration in the `config.toml`. The following options are available:
   
 #### HTTP
 `host`: The hostname which the server should listen to. Example: `localhost`
@@ -59,7 +68,7 @@ You can find the configuration in the `config.toml`. The server must be restarte
 
 ## Database
 The `setup.sql` contains all sql statements to create a database for the server. 
-On setup: Execute all statements on the correct database for the server.
+On setup: Execute all statements on the correct database for the server (usually done by running `npm run configure`).
 On update: Only execute all statements after the version you have already installed. The sql file contains comments for each version.
 
 ## Contributing  
