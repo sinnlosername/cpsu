@@ -41,22 +41,33 @@ You can find the configuration in the `config.toml`. The server must be restarte
   
 #### HTTP
 `host`: The hostname which the server should listen to. Example: `localhost`
+
 `port`: The port which the server should listen to. Example: `8080`
+
 `overwriteProtocol`: If your server is behind a proxy you can set this to overwrite the protocol. Example: `https`
+
 `realIPHeader`: If your server is behind a proxy you can set this to fetch the real ip from headers (visible in logs). Example: `x-forward-for`
 
 #### Database
 `host`: The hostname of your MySQL server. Example: `localhost`
+
 `port`: The port of your MySQL server. Example: `3306`
+
 `user`: The MySQL username. Example: `cpsu`
+
 `password`: The MySQL password. Example: `cpsu`
+
 `database`: The MySQL database name. Example: `cpsu`
+
 `connections`: The amount of connections the server keeps open in it's connection pool. Example: `5`
 
 #### App
 `nameLength`: The length of generated file names. Names can contain characters from A-Z, a-z and 0-9. Example: `4`
+
 `maxSingleFileSizeMB`: The maximum size a single file may have (in MB). Example: `50`
+
 `maxThumbnailCacheMB`: The maximum size of the thumbnail cache (in MB). Example: '25'
+
 `fileCachingHeader`: The [caching header](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Cache-Control) sent when files are served. Example: `no-cache, no-store, must-revalidate`
 
 ## Database
