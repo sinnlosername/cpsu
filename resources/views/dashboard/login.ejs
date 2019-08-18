@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--suppress HtmlRequiredTitleElement -->
+<head>
+    <%- include("head", {title: "Login", css: "css/login.css", js: "js/login.js"}) %>
+</head>
+<body>
+
+<div class="card login-card" style="width: 18rem;">
+    <div class="card-body">
+        <h3 class="card-title text-center">Login</h3>
+
+        <form data-endpoint="POST /x/user/session">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password / Key</label>
+                <input type="password" class="form-control" name="password" id="password" required>
+            </div>
+
+            <div class="form-error text-danger"></div>
+
+            <div class="col-10 offset-1">
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
