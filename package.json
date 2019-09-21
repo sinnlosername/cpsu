@@ -5,7 +5,8 @@
   "main": "lib/app.js",
   "scripts": {
     "configure": "node bin/configure.js",
-    "start": "node bin/start.js"
+    "start": "cross-env NODE_ENV=development node bin/start.js",
+    "start-dev": "cross-env NODE_ENV=development node bin/start.js"
   },
   "repository": {
     "type": "git",
@@ -15,11 +16,14 @@
   "author": "Florian (https://florian.ws)",
   "license": "MIT",
   "dependencies": {
+    "@hapi/joi": "^16.1.4",
     "@iarna/toml": "^2.2.3",
-    "argon2": "^0.24.0",
+    "@types/hapi__joi": "^15.0.4",
+    "argon2": "^0.24.1",
     "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
     "debug": "^4.1.1",
-    "ejs": "^2.6.2",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
     "mime-types": "^2.1.24",
     "moment": "^2.24.0",
@@ -31,6 +35,7 @@
     "url-regex": "^5.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.1.0"
+    "cross-env": "^6.0.0",
+    "eslint": "^6.4.0"
   }
 }
