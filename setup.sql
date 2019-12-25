@@ -29,3 +29,6 @@ create table file
 /* 1.1.0 */
 alter table file add link varchar(2048) null;
 alter table file modify fileName varchar(20) null;
+
+/* 2.0.0 */
+alter table user add column password varchar(100) null;
