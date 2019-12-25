@@ -32,7 +32,7 @@ The following steps get you a fully-functioning server installation.
 ### Prepare
 1. Make sure you installed [Node.js](https://nodejs.org) on your system.
 2. Make sure you have a MySQL compatible database server.
-3. Download or clone the repository into a folder (`git clone https://github.com/sinnlosername/cpsu.git`).
+3. Download the latest version from the [releases](https://github.com/sinnlosername/cpsu/releases) page.
 
 ### Setup
 4. Run `npm install` in the folder to install all dependencies
