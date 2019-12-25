@@ -11,7 +11,7 @@ With this method you can upload a file by sending it as a POST  request body to 
 - File upload
 - URL shortening
 
-You can generate a ShareX configuration for your server at `http://host:port/s/sharex`. It can be imported as a custom uploader in ShareX. 
+You can download a ShareX configuration for your server from `http://host:port/s/sharex/file` (for images, texts and files) and `http://host:port/s/sharex/url` (for url shorting). It can be imported as a custom uploader in ShareX. 
 
 ## View files
 You can view files in different ways:
