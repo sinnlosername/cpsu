@@ -30,5 +30,8 @@ create table file
 alter table file add link varchar(2048) null;
 alter table file modify fileName varchar(20) null;
 
+/* 1.1.1 */
+alter table file modify mimeType varchar(256) not null;
+
 /* 2.0.0 */
 alter table user add column password varchar(100) null;
