@@ -16,26 +16,26 @@
   "author": "Florian (https://florian.ws)",
   "license": "MIT",
   "dependencies": {
-    "@hapi/joi": "^16.1.4",
-    "@iarna/toml": "^2.2.3",
+    "@hapi/joi": "^16.1.8",
+    "@iarna/toml": "^2.2.5",
     "@types/hapi__joi": "^15.0.4",
     "argon2": "^0.24.1",
-    "cookie-parser": "^1.4.4",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "debug": "^4.1.1",
-    "ejs": "^3.1.7",
-    "express": "^4.17.1",
-    "mime-types": "^2.1.24",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mime-types": "^2.1.35",
     "moment": "^2.29.4",
-    "multiparty": "^4.2.1",
-    "promise-mysql": "^4.1.0",
-    "prompts": "^2.2.1",
+    "multiparty": "^4.2.3",
+    "promise-mysql": "^4.1.4",
+    "prompts": "^2.4.2",
     "sharp": "^0.30.7",
     "tmp": "^0.1.0",
     "url-regex": "^5.0.0"
   },
   "devDependencies": {
-    "cross-env": "^6.0.0",
-    "eslint": "^6.4.0"
+    "cross-env": "^6.0.3",
+    "eslint": "^6.8.0"
   }
 }
